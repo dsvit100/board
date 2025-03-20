@@ -34,6 +34,13 @@ board - setting.py -TEMPLATES의 DIR에 외부에 있는 templates도 읽어달�
 python manage.py makemigrations
 ```
 
+
+# 상세페이지
+articles의 url에서 작업 (모든 '/articles'로 시작되는 것들은 다 articles에서 작업함)
+
+
+
+
 article 안에 있는 urls을 만들면
 이것은 article을 관리하기 위한 url이라는 것을 알 수 있음
 

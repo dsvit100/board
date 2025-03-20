@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index) # 여기서는 articles/ 를 넣지 않아도 됨, board의 urls로부터 올 것이기 때문에
+    path('<int:id>/', views.detail)
 ]
