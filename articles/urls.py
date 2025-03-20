@@ -20,4 +20,12 @@ urlpatterns = [
     path('new/', views.new, name='new'),
     # 글 쓸 공간 만들기
     path('create/', views.create, name='create'),
+    
+    # Delete
+    path('<int:id>/delete/', views.delete, name='delete'),
+
+    # Update
+    path('<int:id>/edit/', views.edit, name='edit'),
+
+    path('<int:id>/update/', views.update, name='update'),
 ]
