@@ -4,5 +4,24 @@
 
  {% block body %}
 <!-- 구멍에 맞는 블럭(body)을 넣기 -->
- <h1> index입니다. </h1>
- {% endblock %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>제목</th>
+                <th>내용</th>
+                <!-- th나 td나 동일하게 칸을 나누긴 하나 -->
+                 <!-- th는 굵기표시가 됨(컬럼강조) -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 아래의 내용을 반복해 주세요 -->
+            {% for article in articles %} 
+            <tr>
+                <td>{{article.title}}</td>
+                <td>{{article.content}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

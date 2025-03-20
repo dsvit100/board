@@ -36,3 +36,5 @@ python manage.py makemigrations
 
 article 안에 있는 urls을 만들면
 이것은 article을 관리하기 위한 url이라는 것을 알 수 있음
+
+위 작업을 끝내면 구조만 잡으면 나머지는 base.html만 수정하면 모두 적용됨
