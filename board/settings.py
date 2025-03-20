@@ -55,8 +55,12 @@ ROOT_URLCONF = 'board.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
+        # BASE_DIR = 현재 경로의 parents의 parents (전체폴더)
+        # templates가 꼭 아니어도 됨 #### 자동으로 읽는다는데 그게 됨?
         'APP_DIRS': True,
+        # 모든 앱들의 templates를 자동 탐지하고 있다.
+        # DIRS에 폴더 설정을 해주면 '여기에서도 탐지해줘'
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',

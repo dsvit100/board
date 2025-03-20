@@ -1,0 +1,38 @@
+
+## 0. setting
+
+- 가상환경 생성
+- 가상환경 활성화
+
+## 1. Django
+
+- pip install Django
+- 프로젝트 생성
+
+- `.gitignore` 설정 (python, window, macOS, Django)
+
+```shell
+django-admin startproject crud . 
+# 현재 폴더에 crud라는 프로젝트트를 생성해 주세요.
+```
+
+## 2. 앱 생성 / 등록
+
+```shell
+django-admin startapp posts
+# post라는 데이터를 다룰 것
+```
+등록은 settings.py 에 들어가서 'posts' 포함시키기
+
+## templates 폴더를 app에도 추가, 최상단에도 추가
+django는 외부 templates를 찾을 수 없으므로 직접 세팅해줘야함
+board - setting.py -TEMPLATES의 DIR에 외부에 있는 templates도 읽어달라고 입력해줌
+
+- migration (python 데이터를 번역하여 SQL로 데이터를 이동시키는 작업)
+<!-- 번역본 생성 -->
+```shell
+python manage.py makemigrations
+```
+
+article 안에 있는 urls을 만들면
+이것은 article을 관리하기 위한 url이라는 것을 알 수 있음
