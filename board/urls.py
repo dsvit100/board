@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('articles/', include('articles.urls')) # articles로 들어오면 include로 보내내
+    path('articles/', include('articles.urls')) # articles로 들어오면 include로 보내
 ]
