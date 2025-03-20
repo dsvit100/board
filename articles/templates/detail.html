@@ -1,0 +1,19 @@
+<!-- base.html을 가지고와서 사용할 것임 -->
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="card">
+    <div class="card-header">
+        {{article.title}}
+    <!-- cord-body를 클래스로 하는 div가 만들어짐 -->
+    </div>
+    <div class="card-body">
+        {{article.content}}
+    </div>
+    <div class="card-footer">
+        {{article.created_at}}
+    </div>
+
+</div>
+{% endblock %}

@@ -9,6 +9,7 @@
             <tr>
                 <th>제목</th>
                 <th>내용</th>
+                <th>링크</th>
                 <!-- th나 td나 동일하게 칸을 나누긴 하나 -->
                  <!-- th는 굵기표시가 됨(컬럼강조) -->
             </tr>
@@ -19,6 +20,9 @@
             <tr>
                 <td>{{article.title}}</td>
                 <td>{{article.content}}</td>
+                <td><a href="{% url 'articles:detail' article.id %}" class="btn btn-primary">detail</a></td>
+                <!-- articles 앱의 detail을 불러왔는데도 article.id를 지정해야 하는 이유는 -->
+                 <!-- 앱 detail에 들어간 <int:id> 는 공간일 뿐 들어온 데이터를 얘기한 것이 아니기 때문-->
             </tr>
             {% endfor %}
         </tbody>
