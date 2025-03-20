@@ -1,14 +1,21 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<form action="">
+<form action="{% url 'articles:create' %}" method="POST">
+    <!-- methond 설정 없으면 GET으로 진행되고 있었음(read) -->
+     <!-- POST 는 이 데이터 담아줄테니까 이거 가지고 처리해줘라는 의미 -->
+      <!-- 내가 만든 것이라는 도장까지 함께 넘겨줌 -->
+    {% csrf_token %}
     <div class="mb-3">
-        <label for="" class="form-label">Title</label>
-        <input type="text" class="form-control">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title">
+        <!-- name에 title을 넣고고 -->
     </div>
     <div class="mb-3">
-        <label for="" class="form-label">Content</label>
-        <textarea name="" id="" class="form-control" rows="10"></textarea>
+        <label for="content" class="form-label">Content</label>
+        <textarea name="content" id="content" class="form-control" rows="10"></textarea>
+        <!-- name에 content를 넣어줘야 title과 contect를 가지고 action이 진행됨 -->
+         <!-- 이 부분 이해 안됨~~~~ -->
     </div>
 
     <button type="submit" class="btn btn-primary">제출</button>

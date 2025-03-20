@@ -19,5 +19,5 @@ urlpatterns = [
     # 새글 쓸 빈 종이만 보여주기
     path('new/', views.new, name='new'),
     # 글 쓸 공간 만들기
-    path('create', views.new, name='create'),
+    path('create/', views.create, name='create'),
 ]
